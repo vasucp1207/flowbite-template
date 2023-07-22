@@ -1,12 +1,13 @@
 <script>
-  import { Heading, P, List, Li } from 'flowbite-svelte';
+  import { Button } from 'flowbite-svelte';
+
+  let count = 1;
 </script>
 
-<div class='p-9'>
-<Heading tag="h1">Flowbite-Svelte Playground</Heading>
-<List>
-  <Li class="text-2xl">Fork this</Li>
-  <Li class="text-2xl">Update Flowbite-Svelte by running `pnpm i -D flowbite-svelte@latest`</Li>
-  <Li class="text-2xl">Add your code</Li>
-</List>
+<div class='p-9 flex flex-col items-center justify-center gap-10'>
+  <h1 class='text-6xl'>Flowbite 🧡 Svelte</h1>
+  <div class='flex items-center gap-3 text-2xl'>
+    <div>{count}</div>
+    <Button size='lg' on:click={() => count++}>Press me</Button>
+  </div>
 </div>
